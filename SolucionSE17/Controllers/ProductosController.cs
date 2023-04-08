@@ -8,6 +8,7 @@ using SolucionSE17DAL.Modelo;
 using SolucionSE17DAL.Repositorios;
 using SolucionSE17DAL.Interfaces;
 using System.Web.Helpers;
+using System.Data.Entity;
 
 namespace SolucionSE17.Controllers
 {
@@ -122,7 +123,7 @@ namespace SolucionSE17.Controllers
             //return View(productos);
             using (SuperLaFamiliaEntities ContextoBD = new SuperLaFamiliaEntities())
             {
-                var productos = ContextoBD.Productos;
+                var productos = ContextoBD.Productos.Include(a => a.Marca).Include(a => a.Categoria).Include(a => a.Estado_productos);
                 return View(productos.ToList());
 
 

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SuperLaFamiliaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SuperLaFamiliaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categoria">
           <Key>
             <PropertyRef Name="ID_Categoria" />
@@ -37,7 +37,7 @@
           <Property Name="Cantidad" Type="int" Nullable="false" />
           <Property Name="Id_Estado" Type="int" Nullable="false" />
           <Property Name="Precio" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="Fecha_iNgreso" Type="datetime" />
+          <Property Name="Fecha_iNgreso" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Rol">
           <Key>
@@ -130,8 +130,7 @@
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SuperLaFamiliaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -170,7 +169,7 @@
           <Property Name="Cantidad" Type="Int32" Nullable="false" />
           <Property Name="Id_Estado" Type="Int32" Nullable="false" />
           <Property Name="Precio" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="Fecha_iNgreso" Type="DateTime" Precision="3" />
+          <Property Name="Fecha_iNgreso" Type="DateTime" Precision="3" Nullable="false" />
           <NavigationProperty Name="Categoria" Relationship="Self.FK__Productos__ID_Ca__70DDC3D8" FromRole="Productos" ToRole="Categoria" />
           <NavigationProperty Name="Estado_productos" Relationship="Self.FK__Productos__Id_Es__71D1E811" FromRole="Productos" ToRole="Estado_productos" />
           <NavigationProperty Name="Marca" Relationship="Self.FK__Productos__ID_Ma__6FE99F9F" FromRole="Productos" ToRole="Marca" />

@@ -11,7 +11,7 @@ namespace SolucionSE17DAL.Modelo
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class Estado_productos
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +21,8 @@ namespace SolucionSE17DAL.Modelo
         }
     
         public int ID_Estado { get; set; }
+
+        [Display(Name = "Estado")]
         public string Nombre_estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

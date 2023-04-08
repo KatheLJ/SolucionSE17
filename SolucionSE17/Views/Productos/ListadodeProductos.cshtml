@@ -24,17 +24,17 @@
             @Html.DisplayNameFor(model => model.Nombre_producto)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ID_Marca)
+            @Html.DisplayNameFor(model => model.Marca.Descripcion)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ID_Categoría)
+            @Html.DisplayNameFor(model => model.Categoria.Descripcion)
         </th>
 
         <th>
             @Html.DisplayNameFor(model => model.Cantidad)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Id_Estado)
+            @Html.DisplayNameFor(model => model.Estado_productos.Nombre_estado)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Precio)
@@ -55,17 +55,17 @@
                 @Html.DisplayFor(modelItem => item.Nombre_producto)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ID_Marca)
+                @Html.DisplayFor(modelItem => item.Marca.Descripcion)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ID_Categoría)
+                @Html.DisplayFor(modelItem => item.Categoria.Descripcion)
             </td>
 
             <td>
                 @Html.DisplayFor(modelItem => item.Cantidad)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Id_Estado)
+                @Html.DisplayFor(modelItem => item.Estado_productos.Nombre_estado)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Precio)
