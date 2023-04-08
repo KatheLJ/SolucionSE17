@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<!-- Header -->
+<div class="page-heading header-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!--Título de la sección-->
+                <br />
+                <h4></h4>
+                <br />
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Form de iniciar sesion -->
+
+<div class="container">
+    <div class="row">
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <br />
+                <h1 class="h1">Inicie Sesión para poder continuar</h1>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="col-md-12">
+            <form id="login" action="InicioSesion" controller="Empleados" method="get" class="system-forms">
+                <br />
+
+                <!--Para digitar el usuario-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="field item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3  label-align">Usuario<span class="required"></span></label>
+                                <div class="col-md-6 col-sm-6">
+                                    <input name="Usuario" type="text" class="form-control" id="usuario" placeholder="Ej: JuanMora" required="">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <!--Para digitar la contraseña-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="field item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3  label-align">Contraseña<span class="required"></span></label>
+                                <div class="col-md-6 col-sm-6">
+                                    <input name="Contraseña" type="password" class="form-control" placeholder="*******" id="contrasena" required="">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <br />
+
+
+                <!--Botones de ingresar y limpiar campos-->
+                <div class="col-lg-12">
+                    <fieldset class="text-center">
+                        <button type="submit" class="btn btn-success" id="btn-Login">Ingresar</button>
+                        <button type='reset' class="btn btn-secondary">Limpiar campos</button>
+                    </fieldset>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

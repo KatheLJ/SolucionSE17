@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="44ef737c81c5431ebc5cb9b3992d499a" Name="Diagram1">
+        <EntityTypeShape EntityType="SuperLaFamiliaModel.Categoria" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperLaFamiliaModel.Estado_productos" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperLaFamiliaModel.Marca" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperLaFamiliaModel.Producto" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperLaFamiliaModel.Rol" Width="1.5" PointX="5.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperLaFamiliaModel.Usuario" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="SuperLaFamiliaModel.FK__Productos__ID_Ca__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperLaFamiliaModel.FK__Productos__Id_Es__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperLaFamiliaModel.FK__Productos__ID_Ma__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperLaFamiliaModel.FK__Usuario__ID_Rol__5165187F" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
