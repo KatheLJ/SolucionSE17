@@ -1,7 +1,144 @@
 ﻿
 @{
     ViewBag.Title = "CrearProducto";
+    List<SelectListItem> items = (List<SelectListItem>)ViewData["EstadoProducto"];
+    List<SelectListItem> items2 = (List<SelectListItem>)ViewData["Categoria"];
+    List<SelectListItem> items3 = (List<SelectListItem>)ViewData["Marca"];
 }
 
-<h2>CrearProducto</h2>
+
+<div class="text-center">
+    <div class="section-heading">
+        <br />
+        <h2 class="h2 text-center"> Ingresar Producto </h2>
+        <span>Llene todos los campos para poder registrar un producto</span>
+    </div>
+</div>
+
+<br />
+<br />
+
+
+<div class="">
+    <div class="text-center">
+        <form id="registroproductos" action="RegistroProductos" controller="Productos" method="post">
+            <div class="row">
+                <fieldset>
+                    <div class="">
+                        <label class="">Identificador</label>
+                        <div class="">
+                            <input class="" type="number" id="ID_Producto" name="ID_Producto" required="" />
+                        </div>
+                    </div>
+                </fieldset>
+
+                <br />
+
+
+                <fieldset>
+                    <div class="">
+                        <label class="">Nombre</label>
+                        <div class="text-center">
+                            <input class="" type="text" id="Nombre_producto" name="Nombre_producto" required="" />
+                        </div>
+                    </div>
+                </fieldset>
+
+                <br />
+
+
+
+                <fieldset>
+                    <div class="form-group">
+                        <label class="">Id Estado</label>
+                        <div class="text-center">
+                            @Html.DropDownList("ID_Categoría", items2, "Seleccione la categoría", new { required = "required" })
+                        </div>
+                    </div>
+                </fieldset>
+
+                <br />
+
+
+
+                <fieldset>
+                    <div class="form-group">
+                        <label class="">Id Estado</label>
+                        <div class="text-center">
+                            @Html.DropDownList("ID_Marca", items3, "Seleccione la marca", new { required = "required" })
+                        </div>
+                    </div>
+                </fieldset>
+
+                <br />
+
+
+
+
+                <fieldset>
+                    <div class="">
+                        <label class="">Cantidad</label>
+                        <div class="text-center">
+                            <input class="" type="number" id="Cantidad" name="Cantidad" required="" />
+                        </div>
+                    </div>
+                </fieldset>
+
+                <br />
+
+
+
+
+                <fieldset>
+                    <div class="form-group">
+                        <label class="">Id Estado</label>
+                        <div class="text-center">
+                            @Html.DropDownList("ID_estado", items, "Seleccione el estado", new { required = "required" })
+                        </div>
+                    </div>
+                </fieldset>
+
+                <br />
+
+
+
+                <fieldset>
+                    <div class="">
+                        <label class="">Precio</label>
+                        <div class="text-center">
+                            <input class="" type="number" id="Precio" name="Precio" required="" />
+                        </div>
+                    </div>
+                </fieldset>
+
+                <br />
+
+
+                <fieldset>
+                    <div class="">
+                        <label class="">Fecha Ingreso</label>
+                        <div class="text-center">
+                            <input class="" type="date" id="Fecha_ingreso" name="Fecha_ingreso" required="" />
+                        </div>
+                    </div>
+                </fieldset>
+
+                <br />
+
+
+
+                <div class="">
+                    <br />
+                    <button type='submit' class="btn btn-success">Registrar</button> |
+                    <button type='reset' class="btn btn-secondary">Borrar</button>
+                </div>
+
+                <br />
+
+
+            </div>
+        </form>
+    </div>
+</div>
+
 

@@ -19,7 +19,7 @@ namespace SolucionSE17DAL.Modelo
         public int ID_Rol { get; set; }
         public int Telefono { get; set; }
         public string Correo { get; set; }
-        public string Usuario1 { get; set; }
+        public string Username { get; set; }
         public string Contraseña { get; set; }
     
         public virtual Rol Rol { get; set; }

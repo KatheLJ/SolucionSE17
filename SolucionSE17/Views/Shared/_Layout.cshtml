@@ -57,11 +57,19 @@
                             <a class="nav-link" href="@Url.Action("Contact", "Home")">Contáctenos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="@Url.Action("List", "Productos")">Productos</a>
+                            <a class="nav-link" href="@Url.Action("Registro", "Usuarios")">Registro</a>
                         </li>
                     </ul>
                 </div>
             </div>
+
+            @if (Session["Administrador"] != null)
+            {
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("List", "Productos")" class="nav-item nav-link">Productos</a></li>
+                </ul>
+
+            }
 
 
 

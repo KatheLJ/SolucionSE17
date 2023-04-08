@@ -24,7 +24,7 @@ namespace SolucionSE17.Controllers
 
 
         // GET: Productos
-        public ActionResult RegistrodeProductos()
+        public ActionResult CrearProducto()
         {
             //Se inicializan las listas que se usaran más adelante
             List<Models.ViewModels.Estado_productos> lst = null;
@@ -132,28 +132,57 @@ namespace SolucionSE17.Controllers
 
 
         //Muestra el formulario que permite actualizar un valor de las Productos del Producto
-        public ActionResult ActualizarProductos(int id)
+        public ActionResult ActualizarProducto(int ID_Producto)
         {
-            Producto obj = _oGestorProducto.ListadodeProductos().Where(x => x.ID_Producto == id).FirstOrDefault();
+            Producto obj = _oGestorProducto.ListadodeProductos().Where(x => x.ID_Producto == ID_Producto).FirstOrDefault();
             return View(obj);
 
         }
 
 
         //Permite actualizar una Producto del Producto
-        public ActionResult ActualizarProducto(Producto pProducto)
+        public ActionResult ActualizarProductos(Producto pProducto)
         {
             int registros = _oGestorProducto.ActualizarProducto(pProducto);
             return RedirectToAction("ListadodeProductos");
 
         }
 
-        //Permite eliminar una Producto del Producto
-        public ActionResult EliminarProducto(int id)
+
+        public ActionResult EliminarProducto(int ID_Producto)
         {
-            int registro = _oGestorProducto.EliminarProducto(id);
+            using (SuperLaFamiliaEntities ContextoBD = new SuperLaFamiliaEntities())
+            {
+                var productos = ContextoBD.Productos;
+                return View(productos.ToList().Where(x => x.ID_Producto == ID_Producto).FirstOrDefault());
+            }
+
+        }
+
+
+        //Permite eliminar una Producto del Producto
+        public ActionResult Eliminar(int ID_Producto)
+        {
+            int registro = _oGestorProducto.EliminarProducto(ID_Producto);
             return RedirectToAction("ListadodeProductos");
 
         }
+
+
+
+        public ActionResult VerProducto(int ID_Producto)
+        {
+
+            using (SuperLaFamiliaEntities ContextoBD = new SuperLaFamiliaEntities())
+            {
+                var productos = ContextoBD.Productos;
+                return View(productos.ToList().Where(x => x.ID_Producto == ID_Producto).FirstOrDefault());
+            }
+
+
+        }
+
+
+
     }
 }

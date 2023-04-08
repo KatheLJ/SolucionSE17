@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="44ef737c81c5431ebc5cb9b3992d499a" Name="Diagram1">
+      <Diagram DiagramId="17150639c77a4a50a7981484f81f7322" Name="Diagram1">
         <EntityTypeShape EntityType="SuperLaFamiliaModel.Categoria" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SuperLaFamiliaModel.Estado_productos" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SuperLaFamiliaModel.Marca" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />

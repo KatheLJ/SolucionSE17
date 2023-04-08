@@ -85,7 +85,7 @@ namespace SolucionSE17.Controllers
             {
                 using (SuperLaFamiliaEntities ContextoBD = new SuperLaFamiliaEntities())
                 {
-                    var user = ContextoBD.Usuarios.FirstOrDefault(a => a.Usuario1.Equals(pUsuario.Usuario1) &&
+                    var user = ContextoBD.Usuarios.FirstOrDefault(a => a.Username.Equals(pUsuario.Username) &&
                     a.Contraseña.Equals(pUsuario.Contraseña));
 
                     if (user != null)
@@ -93,16 +93,9 @@ namespace SolucionSE17.Controllers
                         // Si se encuentra el usuario, se establecen las variables de sesión correspondientes
                         if (user.ID_Rol == 1)
                         {
-                            Session["Gerencia"] = user.Usuario1;
+                            Session["Administrador"] = user.Username;
                         }
-                        else if (user.ID_Rol == 2)
-                        {
-                            Session["Administrador"] = user.Usuario1;
-                        }
-                        else if (user.ID_Rol == 3)
-                        {
-                            Session["Usuario"] = user.Usuario1;
-                        }
+                        
 
                         Session["ID_Usuario"] = user.ID_Usuario;
                         Session["Nombre_Usuario"] = user.Nombre_Usuario;
@@ -114,7 +107,7 @@ namespace SolucionSE17.Controllers
             }
 
             // Si no se encuentra el usuario, redireccionar a la página de registro
-            return RedirectToAction("Registro", "Usuario");
+            return RedirectToAction("Registro", "Usuarios");
         }
 
     }

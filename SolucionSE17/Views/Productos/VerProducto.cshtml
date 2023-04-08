@@ -1,7 +1,75 @@
-﻿
+﻿@model SolucionSE17DAL.Modelo.Producto
+
 @{
     ViewBag.Title = "VerProducto";
 }
 
-<h2>VerProducto</h2>
 
+<div>
+    <br />
+    <h4>Información del Producto</h4>
+    <hr />
+    <dl class="text-center">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_Producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_Producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_Marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_Marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_Categoría)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_Categoría)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+    </dl>
+</div>
+<br />
+<p>
+    @Html.ActionLink("Crear Nuevo", "IngresarProducto", new { }, new { @class = "btn btn-secondary btn-sm" })
+</p>

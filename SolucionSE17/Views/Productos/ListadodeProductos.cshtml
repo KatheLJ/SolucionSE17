@@ -74,7 +74,7 @@
                 @Html.DisplayFor(modelItem => item.Fecha_iNgreso)
             </td>
             <td>
-                @Html.ActionLink("Editar", "Edit", new { ID_Producto = item.ID_Producto }, new { @class = "btn btn-success btn-sm" }) |
+                @Html.ActionLink("Editar", "ActualizarProducto", new { ID_Producto = item.ID_Producto }, new { @class = "btn btn-success btn-sm" }) |
                 @Html.ActionLink("Ver", "VerProducto", new { ID_Producto = item.ID_Producto }, new { @class = "btn btn-success btn-sm" }) |
                 @Html.ActionLink("Eliminar", "Eliminar", new { ID_Producto = item.ID_Producto }, new { @class = "btn btn-success btn-sm" })
             </td>
@@ -85,5 +85,5 @@
 
 
 <p>
-    @Html.ActionLink("Crear Nuevo", "Crear", new { }, new { @class = "btn btn-secondary btn-sm" })
+    @Html.ActionLink("Crear Nuevo", "CrearProducto", new { }, new { @class = "btn btn-secondary btn-sm" })
 </p>

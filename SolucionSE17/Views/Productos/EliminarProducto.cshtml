@@ -1,7 +1,98 @@
 ﻿
+@model SolucionSE17DAL.Modelo.Producto
 @{
     ViewBag.Title = "EliminarProducto";
 }
 
-<h2>EliminarProducto</h2>
 
+<div class="row text-center pt-3">
+    <div class="col-lg-6 m-auto">
+        <br />
+        <h2 class="h2">¿Está seguro de que desea eliminar este producto?</h2>
+    </div>
+</div>
+
+
+<div>
+    <!--<h4>Productos</h4>-->
+    <hr />
+    <dl class="text-center">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_Producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_Producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_Marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_Marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_Categoría)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_Categoría)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_iNgreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_iNgreso)
+        </dd>
+
+    </dl>
+
+
+
+
+    @using (Html.BeginForm("Eliminar", "Productos", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions">
+            <button type='submit' class="btn btn-info">Eliminar</button> |
+            @Html.ActionLink("Regresar", "List", new { }, new { @class = "btn btn-secondary btn-sm" })
+        </div>
+    }
+</div>

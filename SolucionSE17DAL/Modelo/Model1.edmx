@@ -55,7 +55,7 @@
           <Property Name="ID_Rol" Type="int" Nullable="false" />
           <Property Name="Telefono" Type="int" Nullable="false" />
           <Property Name="Correo" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Usuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Contraseña" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <Association Name="FK__Productos__ID_Ca__70DDC3D8">
@@ -192,7 +192,7 @@
           <Property Name="ID_Rol" Type="Int32" Nullable="false" />
           <Property Name="Telefono" Type="Int32" Nullable="false" />
           <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Usuario1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Rol" Relationship="Self.FK__Usuario__ID_Rol__5165187F" FromRole="Usuario" ToRole="Rol" />
         </EntityType>
@@ -328,7 +328,7 @@
                 <ScalarProperty Name="ID_Rol" ColumnName="ID_Rol" />
                 <ScalarProperty Name="Telefono" ColumnName="Telefono" />
                 <ScalarProperty Name="Correo" ColumnName="Correo" />
-                <ScalarProperty Name="Usuario1" ColumnName="Usuario" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
               </MappingFragment>
             </EntityTypeMapping>
