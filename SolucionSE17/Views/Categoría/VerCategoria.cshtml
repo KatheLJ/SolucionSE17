@@ -1,0 +1,33 @@
+﻿@model SolucionSE17DAL.Modelo.Categoria
+
+@{
+    ViewBag.Title = "VerCategoria";
+}
+
+
+<div>
+    <br />
+    <h4>Información de la Categoria</h4>
+    <hr />
+    <dl class="text-center">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_Categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_Categoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+       
+
+    </dl>
+</div>
+<br />

@@ -1,0 +1,52 @@
+﻿
+@model SolucionSE17DAL.Modelo.Categoria
+@{
+    ViewBag.Title = "EliminarCategoria";
+}
+
+
+<div class="row text-center pt-3">
+    <div class="col-lg-6 m-auto">
+        <br />
+        <h2 class="h2">¿Está seguro de que desea eliminar esta categoria?</h2>
+    </div>
+</div>
+
+
+<div>
+    <!--<h4>Productos</h4>-->
+    <hr />
+    <dl class="text-center">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_Categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_Categoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+
+
+    </dl>
+
+
+
+
+    @using (Html.BeginForm("Eliminar", "Productos", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions">
+            <button type='submit' class="btn btn-info">Eliminar</button> |
+            @Html.ActionLink("Regresar", "List", new { }, new { @class = "btn btn-secondary btn-sm" })
+        </div>
+    }
+</div>

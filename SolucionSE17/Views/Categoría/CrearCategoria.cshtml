@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "CrearCategoria";
+}
+
+
+<div class="text-center">
+    <div class="section-heading">
+        <br />
+        <h2 class="h2 text-center"> Ingresar Producto </h2>
+        <span>Llene todos los campos para poder registrar un producto</span>
+    </div>
+</div>
+
+<br />
+<br />
+
+
+<div class="">
+    <div class="text-center">
+        <form id="registroproductos" action="RegistroCategorias" controller="Categoría" method="post">
+            <div class="row">
+                <fieldset>
+                    <div class="">
+                        <label class="">ID</label>
+                        <div class="">
+                            <input class="" type="number" id="ID_Categoria" name="ID_Categoria" required="" />
+                        </div>
+                    </div>
+                </fieldset>
+
+                <br />
+
+
+                <fieldset>
+                    <div class="">
+                        <label class="">Nombre</label>
+                        <div class="text-center">
+                            <input class="" type="text" id="Descripcion" name="Descripcion" required="" />
+                        </div>
+                    </div>
+                </fieldset>
+
+                <br />
+
+                <div class="">
+                    <br />
+                    <button type='submit' class="btn btn-success">Registrar</button> |
+                    <button type='reset' class="btn btn-secondary">Borrar</button>
+                </div>
+
+                <br />
+
+
+            </div>
+        </form>
+    </div>
+</div>
+
+

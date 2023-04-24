@@ -1,0 +1,50 @@
+﻿@model IEnumerable<SolucionSE17DAL.Modelo.Categoria>
+@{
+    ViewBag.Title = "ListadodeCategorias";
+}
+
+
+
+
+<div class="row text-center pt-3">
+    <div class="col-lg-6 m-auto">
+        <br />
+        <h2 class="h2">Listado de categorias disponibles en el sistema</h2>
+    </div>
+</div>
+
+<br />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_Categoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_Categoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "ActualizarCategoria", new { ID_Categoria = item.ID_Categoria }, new { @class = "btn btn-success btn-sm" }) |
+                @Html.ActionLink("Ver", "VerCategoria", new { ID_Categoria = item.ID_Categoria }, new { @class = "btn btn-success btn-sm" }) |
+                @Html.ActionLink("Eliminar", "Eliminar", new { ID_Categoria = item.ID_Categoria }, new { @class = "btn btn-success btn-sm" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "CrearCategoria", new { }, new { @class = "btn btn-secondary btn-sm" })
+</p>

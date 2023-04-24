@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoríaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
@@ -182,6 +183,12 @@
     <Content Include="Views\Productos\EliminarProducto.cshtml" />
     <Content Include="Views\Usuarios\Login.cshtml" />
     <Content Include="Views\Usuarios\Registro.cshtml" />
+    <Content Include="Views\Categoría\ActualizarCategoria.cshtml" />
+    <Content Include="Views\Categoría\CrearCategoria.cshtml" />
+    <Content Include="Views\Categoría\EliminarCategoria.cshtml" />
+    <Content Include="Views\Categoría\ListadodeCategorias.cshtml" />
+    <Content Include="Views\Categoría\VerCategoria.cshtml" />
+    <Content Include="Views\Home\Inicio.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
