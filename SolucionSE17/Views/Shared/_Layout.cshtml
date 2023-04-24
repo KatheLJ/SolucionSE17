@@ -45,19 +45,25 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="@Url.Action("Index", "Home")">Inicio</a>
                         </li>
                     </ul>
+
+
+
+
                 </div>
             </div>
 
             @if (Session["Administrador"] != null)
             {
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                    <li><a class="nav-item nav-link" href="@Url.Action("Index", "Home")">Inicio</a></li>
+                </ul>
+                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                     <li><a href="@Url.Action("ListadodeProductos", "Productos")" class="nav-item nav-link">Productos</a></li>
                 </ul>
-                <ul class="nav navbar-nav">
-                    <li><a href="@Url.Action("ListadodeCategorias", "Productos")" class="nav-item nav-link">Productos</a></li>
+                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                    <li><a href="@Url.Action("ListadodeCategorias", "Categoría")" class="nav-item nav-link">Categorías</a></li>
                 </ul>
 
             }
