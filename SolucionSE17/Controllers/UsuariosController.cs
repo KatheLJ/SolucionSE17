@@ -110,5 +110,18 @@ namespace SolucionSE17.Controllers
             return RedirectToAction("Registro", "Usuarios");
         }
 
+
+        //Acción que permite salir de la sesión al usuario
+        public ActionResult Logout()
+        {
+            //Se abandona la sesión
+            Session.Abandon();
+            //Se borra todos los datos 
+            Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
+            //Se regresa al Inicio del sitio
+            return RedirectToAction("Inicio", "Home");
+        }
+
+
     }
 }
